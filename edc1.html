@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDC Fee Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/Edc_logo_khmer.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="img/Edc_logo_khmer.png" alt="Company Logo">
+            <h1>EDC</h1>
+        </div>
+        <form id="edc-form">
+            <label for="id">Employee ID:</label>
+            <input type="text" id="id" required>
+
+            <label for="name">Employee Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="old-reading">Old Number Reading:</label>
+            <input type="number" id="old-reading" required>
+
+            <label for="new-reading">New Number Reading:</label>
+            <input type="number" id="new-reading" required>
+
+            <label for="trash-fee">Fee Trash:</label>
+            <input type="number" id="trash-fee" required>
+
+            <button type="button" onclick="calculateResults()">Calculate</button>
+        </form>
+
+        <div id="results" class="result" style="display: none;">
+            <p><strong>Employee ID:</strong> <span id="result-id"></span></p>
+            <p><strong>Employee Name:</strong> <span id="result-name"></span></p>
+            <p><strong>Units Used:</strong> <span id="units-used"></span></p>
+            <p><strong>Usage Fee:</strong> $<span id="usage-fee"></span></p>
+            <p><strong>Fee Trash:</strong> $<span id="fee-trash"></span></p>
+            <p><strong>Total Fee:</strong> $<span id="total-fee"></span></p>
+        </div>
+    </div>
+
+    <script src="java/java.js"> </script>
+</body>
+</html>
